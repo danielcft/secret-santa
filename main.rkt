@@ -3,11 +3,10 @@
 
 (require srfi/1)
 
-(define data '(
+(define participants '(
                "Alice"
                "Bob"
-               "Eve"
-               ))
+               "Eve"))
 
 (define get-path
   (λ (l)
@@ -21,5 +20,4 @@
            (cons (list (first l) (second l)) (get-path* (cdr l)))))))
     (get-path* l)))
 
-  
-(get-path (shuffle data))
+(get-path (shuffle participants))
